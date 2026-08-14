@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempora — Temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="card">
+
+<header>
+    <p class="eyebrow">Instrument No. 01 — Thermometry</p>
+    <h1>Tempora</h1>
+    <p class="tagline">
+        Convert Celsius, Fahrenheit and Kelvin instantly.
+    </p>
+</header>
+
+<form id="converter">
+
+    <div class="field">
+        <label for="temperature">Temperature</label>
+        <input
+            id="temperature"
+            type="number"
+            step="any"
+            placeholder="e.g. 25"
+            autocomplete="off"
+        >
+        <small id="error"></small>
+    </div>
+
+    <div class="field">
+        <label for="unit">Input Unit</label>
+        <select id="unit">
+            <option value="C">Celsius (°C)</option>
+            <option value="F">Fahrenheit (°F)</option>
+            <option value="K">Kelvin (K)</option>
+        </select>
+    </div>
+
+    <button type="submit">Convert Temperature</button>
+
+</form>
+
+<section class="results">
+
+    <div class="thermometer">
+        <div class="tube">
+            <div id="mercury"></div>
+        </div>
+        <div id="bulb"></div>
+    </div>
+
+    <div class="readouts">
+        <p class="result-title">Results</p>
+
+        <div class="result" id="c-row">
+            <span>Celsius</span>
+            <strong id="celsius">— °C</strong>
+        </div>
+
+        <div class="result" id="f-row">
+            <span>Fahrenheit</span>
+            <strong id="fahrenheit">— °F</strong>
+        </div>
+
+        <div class="result" id="k-row">
+            <span>Kelvin</span>
+            <strong id="kelvin">— K</strong>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    Celsius <b>↔</b> Fahrenheit <b>↔</b> Kelvin
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

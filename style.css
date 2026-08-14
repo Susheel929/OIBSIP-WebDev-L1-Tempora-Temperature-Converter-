@@ -1,0 +1,284 @@
+:root {
+--bg: #f4f1eb;
+--card: #fffdf8;
+--text: #1d2429;
+--muted: #73787b;
+--line: #dedbd3;
+--accent: #e8543e;
+--cold: #5fa8d3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 25px;
+font-family: "Inter", sans-serif;
+color: var(--text);
+background:
+radial-gradient(circle at 10% 20%, #e8543e18, transparent 30%),
+radial-gradient(circle at 90% 80%, #5fa8d318, transparent 30%),
+var(--bg);
+}
+
+.card {
+width: min(100%, 680px);
+padding: 40px;
+background: var(--card);
+border: 1px solid #ffffff;
+border-radius: 26px;
+box-shadow: 0 25px 70px #22262a18;
+animation: show .6s ease;
+}
+
+@keyframes show {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+header {
+margin-bottom: 30px;
+}
+
+.eyebrow,
+.result-title,
+label,
+footer {
+font-family: "JetBrains Mono", monospace;
+}
+
+.eyebrow {
+margin-bottom: 10px;
+color: var(--accent);
+font-size: 10px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+h1 {
+font-family: "Fraunces", serif;
+font-size: clamp(50px, 9vw, 72px);
+line-height: 1;
+}
+
+.tagline {
+margin-top: 14px;
+color: var(--muted);
+font-size: 14px;
+line-height: 1.6;
+}
+
+form {
+padding: 24px;
+border: 1px solid var(--line);
+border-radius: 18px;
+background: #ffffffb8;
+}
+
+.field {
+margin-bottom: 18px;
+}
+
+label {
+display: block;
+margin-bottom: 8px;
+color: #565c60;
+font-size: 10px;
+font-weight: 600;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+input,
+select,
+button {
+width: 100%;
+height: 52px;
+border-radius: 11px;
+font: inherit;
+}
+
+input,
+select {
+padding: 0 14px;
+border: 1px solid var(--line);
+outline: none;
+background: white;
+color: var(--text);
+}
+
+input:focus,
+select:focus {
+border-color: var(--accent);
+box-shadow: 0 0 0 4px #e8543e15;
+}
+
+button {
+border: 0;
+background: var(--text);
+color: white;
+font-weight: 600;
+cursor: pointer;
+transition: .2s;
+}
+
+button:hover {
+background: var(--accent);
+transform: translateY(-2px);
+}
+
+#error {
+display: block;
+min-height: 16px;
+margin-top: 6px;
+color: var(--accent);
+font-size: 12px;
+}
+
+.results {
+display: grid;
+grid-template-columns: 90px 1fr;
+align-items: center;
+gap: 28px;
+margin-top: 24px;
+padding: 25px;
+border: 1px solid var(--line);
+border-radius: 18px;
+background: #f8f6f0;
+}
+
+.thermometer {
+position: relative;
+width: 70px;
+height: 190px;
+}
+
+.tube {
+position: absolute;
+bottom: 30px;
+left: 27px;
+width: 16px;
+height: 145px;
+overflow: hidden;
+border: 1px solid #bbb;
+border-radius: 10px;
+background: #ffffffaa;
+}
+
+#mercury {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 0;
+border-radius: 10px;
+background: var(--accent);
+transition: height .5s ease, background .3s ease;
+}
+
+#bulb {
+position: absolute;
+bottom: 0;
+left: 11px;
+width: 48px;
+height: 48px;
+border-radius: 50%;
+background: var(--accent);
+box-shadow: 0 8px 20px #e8543e35;
+transition: .3s;
+}
+
+.result-title {
+margin-bottom: 8px;
+color: var(--accent);
+font-size: 10px;
+font-weight: 600;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+.result {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 13px 10px;
+border-bottom: 1px solid var(--line);
+transition: .2s;
+}
+
+.result:last-child {
+border-bottom: 0;
+}
+
+.result:hover,
+.result.active {
+background: #fff0ec;
+border-radius: 8px;
+}
+
+.result span {
+color: var(--muted);
+font-size: 13px;
+}
+
+.result strong {
+font-family: "JetBrains Mono", monospace;
+font-size: 16px;
+}
+
+.result.active strong {
+color: var(--accent);
+}
+
+footer {
+margin-top: 22px;
+text-align: center;
+color: #8a8b88;
+font-size: 9px;
+letter-spacing: 1px;
+}
+
+footer b {
+margin: 0 8px;
+color: var(--accent);
+}
+
+@media (max-width: 600px) {
+body {
+padding: 15px;
+align-items: flex-start;
+}
+
+.card {
+    margin-top: 10px;
+    padding: 25px 18px;
+    border-radius: 20px;
+}
+
+form {
+    padding: 18px;
+}
+
+.results {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 20px;
+}
+
+.thermometer {
+    margin: auto;
+    transform: scale(.8);
+}
+}
