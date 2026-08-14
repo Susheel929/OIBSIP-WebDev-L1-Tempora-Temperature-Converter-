@@ -2,7 +2,7 @@
 
 A clean and responsive temperature conversion web tool built with **HTML5, CSS3, and Vanilla JavaScript**. The application allows users to convert temperature values between **Celsius, Fahrenheit, and Kelvin** with input validation and clear error messages.
 
-🔗 Live Demo: https://oibsip-web-dev-l1-tempora-temperatu.vercel.app/
+## 🔗Live Demo: https://oibsip-web-dev-l1-tempora-temperatu.vercel.app/
 
 ## Features
 
@@ -34,43 +34,43 @@ The application uses the standard temperature conversion formulas.
 
 ### Celsius
 
-text
+```text
 Fahrenheit = (Celsius × 9/5) + 32
 
 Kelvin = Celsius + 273.15
-
+```
 
 ### Fahrenheit
 
-text
+```text
 Celsius = (Fahrenheit − 32) × 5/9
 
 Kelvin = ((Fahrenheit − 32) × 5/9) + 273.15
-
+```
 
 ### Kelvin
 
-text
+```text
 Celsius = Kelvin − 273.15
 
 Fahrenheit = ((Kelvin − 273.15) × 9/5) + 32
-
+```
 
 ## Absolute Zero Validation
 
 The application prevents physically invalid temperatures below absolute zero.
 
-text
+```text
 Celsius: -273.15 °C
 Fahrenheit: -459.67 °F
 Kelvin: 0 K
-
+```
 
 When the entered temperature is below the valid absolute-zero limit for the selected unit, a clear error message is displayed instead of producing a result.
 
 ## Project Structure
 
-text
+```text
 Temperature-Converter/
 │
 ├── index.html
@@ -79,7 +79,7 @@ Temperature-Converter/
 ├── README.md
 ├── .gitignore
 └── LICENSE
-
+```
 
 ## How to Run
 
@@ -87,19 +87,19 @@ No installation or external dependencies are required.
 
 ### 1. Clone the Repository
 
-bash
-git clone https://github.com/Susheel929/OIBSIP-WebDev-L1-Tempora-Temperature-Converter
-
+```bash
+git clone https://github.com/your-username/temperature-converter.git
+```
 
 ### 2. Open the Project
 
-bash
+```bash
 cd temperature-converter
-
+```
 
 ### 3. Run the Application
 
-Open index.html in a modern web browser.
+Open `index.html` in a modern web browser.
 
 You can also use the **Live Server** extension in Visual Studio Code for local development.
 
@@ -151,4 +151,4 @@ B.Tech Information Technology Student
 
 This project is licensed under the **MIT License**.
 
-See the LICENSE file for details.
+See the `LICENSE` file for details.
