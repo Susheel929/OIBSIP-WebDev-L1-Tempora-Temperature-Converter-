@@ -88,7 +88,7 @@ No installation or external dependencies are required.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/temperature-converter.git
+git clone https://github.com/Susheel929/OIBSIP-WebDev-L1-Tempora-Temperature-Converter-
 ```
 
 ### 2. Open the Project
