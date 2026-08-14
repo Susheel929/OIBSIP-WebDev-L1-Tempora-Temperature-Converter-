@@ -2,7 +2,7 @@
 
 A clean and responsive temperature conversion web tool built with **HTML5, CSS3, and Vanilla JavaScript**. The application allows users to convert temperature values between **Celsius, Fahrenheit, and Kelvin** with input validation and clear error messages.
 
-*Live Demo*: https://oibsip-web-dev-l1-tempora-temperatu.vercel.app/
+🔗 Live Demo: https://oibsip-web-dev-l1-tempora-temperatu.vercel.app/
 
 ## Features
 
